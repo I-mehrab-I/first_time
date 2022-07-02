@@ -13,7 +13,9 @@
                 <nav class="collapse navbar-collapse main-navbar">
                     <div class="menu-container">
                         <ul class="nav navbar-nav" id="menu-main">
-                            <li class="menu-item dropdown active "> <a href="/shop-index.html">Home</a>
+                            <li class="menu-item @if (Route::currentRouteName() == 'home') active @endif"> <a href="{{ route('home') }}">خانه</a></li>
+                            <li class="menu-item dropdown active"> <a href="/shop-index.html">دسته بندی</a>
+                                
                                 <ul class="dropdown-menu dropdown-menu-left ">
                                     <li class="menu-item"> <a href="/shop-flexslider.html">Flexslider</a> </li>
                                     <li class="menu-item"> <a href="/shop-right-sidebar.html">Right Sidebar</a> </li>
@@ -31,7 +33,7 @@
                                     <li class="menu-item"> <a href="/shop-checkout.html">Checkout</a> </li>
                                 </ul>
                             </li>
-                            <li class="menu-item dropdown  "> <a href="/shop-contact.html">Contact</a> </li>
+                            <li class="menu-item dropdown @if (Route::currentRouteName() == 'content') active @endif "> <a href="{{ route('content') }}">Contact</a> </li>
                         </ul>
                     </div>
                     <div class="menu-sidebar">
